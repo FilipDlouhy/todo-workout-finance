@@ -1293,4 +1293,27 @@ margin: 50px;
   .displayed-workout:hover{
     width:380px;
   }
+  header{
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #01BAEF;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    font-family: 'Fredoka One', cursive;
+    color: antiquewhite;
+  }
+  header div {
+  width: 180px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  padding-top: 10px;
+  cursor: pointer;
+  }
 }
