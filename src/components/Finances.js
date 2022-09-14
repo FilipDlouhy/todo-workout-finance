@@ -32,7 +32,7 @@ fetch('https://todoapp-1514e-default-rtdb.europe-west1.firebasedatabase.app/fina
   setTotaSpentlBudget(data.spent.totalSpentBudget)
   setTotalBudget(data.total.totalBudget)
   setExpenses(Object.values(data.expenses))  
-
+console.log(data)
 }
   
   
