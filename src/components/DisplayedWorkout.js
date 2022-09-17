@@ -12,7 +12,7 @@ function DisplayedWorkout(props) {
       props.setBackground(true)
       props.setShowWorkout(true)
 
-      fetch(`https://todoapp-1514e-default-rtdb.europe-west1.firebasedatabase.app/workouts/${props.workout.id}/workout.json`)
+      fetch(`https://todoappzwei-default-rtdb.europe-west1.firebasedatabase.app/workouts/${props.workout.id}/workout.json`)
       .then((response) => response.json())
       .then((data) => {
         if(data === null){

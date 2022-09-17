@@ -104,7 +104,7 @@ else if(props.workoutType === "cardio"){
             .then(response => {setAllExrssizes(response)
             console.log(response)})
             .catch(err => console.error(err));
-        fetch(`https://todoapp-1514e-default-rtdb.europe-west1.firebasedatabase.app/workouts/${props.workoutId}/workout.json`).then(response => response.json())
+        fetch(`https://todoappzwei-default-rtdb.europe-west1.firebasedatabase.app/workouts/${props.workoutId}/workout.json`).then(response => response.json())
         .then((data)=>{
             if(data !== null){
                 console.log(Object.values(data))

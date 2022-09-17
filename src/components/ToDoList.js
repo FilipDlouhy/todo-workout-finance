@@ -24,7 +24,7 @@ const [allTodos,setAllTodos] = useState()
       }
       useEffect(()=>{
 if(!allTodos){
-    fetch('https://todoapp-1514e-default-rtdb.europe-west1.firebasedatabase.app/todos.json')
+    fetch('https://todoappzwei-default-rtdb.europe-west1.firebasedatabase.app/todos.json')
     .then((response) => response.json())
     .then((data) =>{
         if(data=== null){

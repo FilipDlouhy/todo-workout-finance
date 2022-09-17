@@ -14,7 +14,7 @@ const [workouts,setWorkouts] = useState()
 const [viewWorkout,setViewWorkout] = useState()
 useEffect(()=>{
 
-  fetch('https://todoapp-1514e-default-rtdb.europe-west1.firebasedatabase.app/workouts.json')
+  fetch('https://todoappzwei-default-rtdb.europe-west1.firebasedatabase.app/workouts.json')
   .then((response) => response.json())
   .then((data) =>{
     if(data=== null){

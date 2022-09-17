@@ -26,12 +26,24 @@ const[showFormExpenseGroup,setShowFormExpenseGroup] = useState(false)
 const[showGroupExpenseForm,setShowGroupExpenseForm] = useState(false)
 const[expenseGroupExpenses,setExpenseGroupExpenses] = useState([])
 useEffect(()=>{
-fetch('https://todoapp-1514e-default-rtdb.europe-west1.firebasedatabase.app/finances.json') .then((response) => response.json())
+fetch('https://todoappzwei-default-rtdb.europe-west1.firebasedatabase.app/finances.json') .then((response) => response.json())
   .then((data) =>{ console.log(data)
 
-  setTotaSpentlBudget(data.spent.totalSpentBudget)
+if(data.total.totalBudget === null ||data.total.totalBudget=== undefined ){
+  setTotalBudget(0)
+}else{
   setTotalBudget(data.total.totalBudget)
+}
+if(data.expenses === null ||data.expenses=== undefined ){
+  setExpenses([])  
+}else{
   setExpenses(Object.values(data.expenses))  
+}
+if(data.spent.totalSpentBudget === null ||data.spent.totalSpentBudget === undefined ){
+  setTotaSpentlBudget(0)
+}else{
+  setTotaSpentlBudget(data.spent.totalSpentBudget)
+}
 console.log(data)
 }
   
